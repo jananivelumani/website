@@ -11,10 +11,14 @@ p{
 svg{
     fill: #ff3333;
 }
-img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
+span{
+    color: #FF3E41;
+}
+img, .top_main, .top-border, .top-div3, .trans_div, 
+.facts_div1, .facts_div2, .service_head{
     width: 100%;
 }
-.top-div1,.nav-bar-icon, .nav-bar, .top-div3, .about_img, .about_div,
+.top-div1,.nav-bar-icon, .nav-bar, .top-div3,  .about_img, .about_div,
 .global, .delivery, .headphone-div, .facts_div, .facts_main, .facts_div3, 
 .service_head, .service_div1, .feature_div1, .feature_div2, .tick, .price_txt {
     float: left;
@@ -23,7 +27,7 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
     background-color: #ff3333;
 }    
 .top-div1, .facts_div1, .facts_div2, .facts_div3, .service_div1{
-    padding: 20px;
+    padding: 21px;
 }
 .facts_div1, .facts_div2, .facts_div3{
     height: 170px;
@@ -38,14 +42,15 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
     padding-left: 25px;
 }
 .head1, .facts{
-    margin-left: 80px;
+    margin-left: 75px;
 }
 .img_txt, .red-txt{
-    font-size: 25px;
+    font-size: 18px;
 }
 .buttonrm, .buttonfq, .buttonem{
-    padding: 20px 55px;
+    padding: 18px 44px;
     font-size: 15px;
+    border: none;
 }
 .about_img, .about_div{
     width: 47%;
@@ -57,7 +62,7 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
 .white-icon, .arrow{
     height: 40px;
 }
-.facts_div, .ftxt1{
+.head3,.head3-1, .facts_div, .ftxt1{
     font-weight: bold;
 }
 .facts_main, .facts_div3{
@@ -67,17 +72,13 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
     margin: 20px 0 0 0;
 }
 .top-border{
-    border: 3px solid #ff3333;
-    position: sticky;
-    top: 0;
+    border: 2px solid #ff3333;
 }
 .top-div1{
     width: 18%;
-    position: sticky;
-    top: 0;
 }
 .top-txt{
-    font-size: 30px;
+    font-size: 28px;
 }
 .nav-bar-icon{
     width: 8%;
@@ -85,40 +86,50 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
 .top-div2{
     float: right;
     padding: 19px;
-    width: 60%;
-    position: sticky;
-    top: 0;
+    width: 59%;
 }
 .nav-bar{
     font-size: 14px;
 }
+.nav-bar-pno{
+    font-size: 21px;
+    letter-spacing: 1px;
+}
 .top-div3{
-    background: url(../images/carousel-1.jpg) no-repeat center;
-    background-size: 100% 100%;
+    position: relative;
+    top: 0;
+}
+.trans_div{
+    background: rgba(6, 3, 21, .5);
+    position: absolute;
+    top: 0;
 }
 .head3{
+    font-size: 17px;
     text-transform: uppercase;
-    padding: 180px 0 20px 80px;
+    padding: 160px 0 15px 75px;
 }
 .head1{
-    font-size: 60px;
+    font-size: 55px;
 }
 .img_txt{
-    text-transform: lowercase;
-    padding: 40px 0 30px 80px;
+    padding: 30px 0 30px 75px;
+    font-weight: 600;
 }
 .buttonrm{
-    margin: 0 10px 180px 80px;
+    margin: 0 10px 165px 75px;
 }
 .buttonfq{
-    background-color: aqua;
-    margin: 0 10px 180px 10px;
+    background-color: #51CFED;
+    margin: 0 10px 0 10px;
 }
 .about_img{
     margin: 150px 0 0 0;
+    position: relative;
 }
 .about_div{
     margin: 150px 0 0 50px;
+    position: relative;
 }
 .head3-1{
     color: #51CFED;
@@ -190,7 +201,7 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
     margin: 100px 0 0 0;
 }
 .service_main1{
-    margin: 0 0 0 55px;
+    margin: auto;
 }
 .service_div1{
     width: 27%;

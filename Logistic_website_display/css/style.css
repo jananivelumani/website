@@ -6,123 +6,157 @@
 }
 p{
     font-family: "Inter",sans-serif;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #555555;
 }
 svg{
     fill: #ff3333;
 }
-img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
+span{
+    color: #FF3E41;
+}
+img, .navigation, .top-border, .banner, .about, .facts, .trans_banner, 
+.clients, .shipments,.cust_reviews, .service_head{
     width: 100%;
 }
-.top-div1,.nav-bar-icon, .top-div2, .nav-bar, .top-div3, .about_img, .about_div,
-.global, .delivery, .headphone-div, .facts_div, .facts_main, .facts_div3, 
+.nav_left,.nav_bar_icon, .nav_bar, .nav_items, .nav_items1, .banner, .about_img, .about_div, .some_facts, 
+.reviews, .global, .delivery, .headphone_icon, .facts_query, .facts_main, .customers, 
 .service_head, .service_div1, .feature_div1, .feature_div2, .tick, .price_txt {
     display: inline-block;
 }
-.top-div1, .buttonem, .headphone-div, .arrow, .buttonrm{
+.nav_left, .buttonem, .headphone_icon, .arrow, .buttonrm{
     background-color: #ff3333;
 }    
-.top-div1, .facts_div1, .facts_div2, .facts_div3, .service_div1{
-    padding: 20px;
+.clients, .shipments, .cust_reviews, .service_div1{
+    padding: 21px;
 }
-.facts_div1, .facts_div2, .facts_div3{
-    height: 170px;
-}
-.top-txt, .center1{
+.nav_txt, .center1{
     text-align: center;
 }
-.top-txt, .head1, .head3, .img_txt, .buttonrm, .buttonfq, .buttonem, .ftxt1, .ftxt2{
+.nav_txt, .head1, .head3, .img_txt, .buttonrm, .buttonfq, .buttonem, .ftxt1, .ftxt2{
     color: #ffffff;
 }
-.nav-bar-icon, .nav-bar{
-    padding-left: 25px;
-}
-.head1, .facts{
-    margin-left: 80px;
+.nav_bar_icon, .nav_items, .nav_items1{
+    padding-left: 19px;
 }
 .img_txt, .red-txt{
-    font-size: 25px;
+    font-size: 18px;
 }
 .buttonrm, .buttonfq, .buttonem{
-    padding: 20px 55px;
+    padding: 18px 44px;
     font-size: 15px;
+    border: none;
 }
-.about_img, .about_div{
-    width: 47%;
-    height: 580px;
+.about_img, .about_div, .reviews{
+    width: 49%;
 }
-.about_div, .delivery, .facts_div3, .feature_div1{
+.about_div, .delivery, .reviews, .customers, .feature_div1{
     vertical-align: top;
 }
-.headphone-div, .feature_div1{
-    height: 60px;
-}
-.white-icon, .arrow{
-    height: 40px;
-}
-.facts_div, .ftxt1{
+.head3,.head3-1, .facts_query, .ftxt1{
     font-weight: bold;
 }
-.facts_main, .facts_div3{
-    width: 20%;
-}
-.facts_div2, .arrow{
+.shipments, .arrow{
     margin: 20px 0 0 0;
 }
-.top-border{
+.navigation{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: 0.5s;
+    background-color: #ffffff;
+}
+.border{
     border: 3px solid #ff3333;
-    position: sticky;
-    top: 0;
+    opacity: 0.9;
 }
-.top-div1{
+.nav_items1::before{
+    content: "";
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 525px;
+    background-color: #ffffff;
+}
+.nav_items::before{
+    content: "";
+    display: none;
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 595px;
+    background-color: #ffffff;
+    transition: 2s;
+}
+.nav_items:hover::before{
+    display: block;
+}
+.nav_left{
     width: 18%;
-    position: sticky;
-    top: 0;
+    padding: 21px;
+    opacity: 0.9;
 }
-.top-txt{
-    font-size: 30px;
+.nav_txt{
+    position: relative;
+    font-size: 28px;
 }
-.nav-bar-icon{
-    width: 6%;
+.nav_bar_icon{
+    width: 5%;
+    opacity: 0.9;
 }
-.top-div2{
-    padding: 9px;
-    width: 77%;
+.nav_bar{
+    padding: 8px;
+    width: 79%;
     text-align: end;
-    position: sticky;
-    top: 0;
 }
-.nav-bar{
+.nav_items, .nav_items1{
     font-size: 14px;
     vertical-align: bottom;
 }
-.top-div3{
-    background: url(../images/carousel-1.jpg) no-repeat center;
-    background-size: 100% 100%;
+.nav_items:hover{
+    color: #FF3E41;
+}
+.nav_bar_pno{
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+.banner{
+    position: relative;
+    top: 0;
+}
+.trans_banner{
+    background: rgba(6, 3, 21, .5);
+    position: absolute;
+    top: 0;
 }
 .head3{
+    font-size: 17px;
     text-transform: uppercase;
-    padding: 180px 0 20px 80px;
+    padding: 160px 0 15px 75px;
 }
 .head1{
-    font-size: 60px;
+    margin-left: 75px;
+    font-size: 55px;
 }
 .img_txt{
-    text-transform: lowercase;
-    padding: 40px 0 30px 80px;
+    padding: 30px 0 30px 75px;
+    font-weight: 600;
 }
 .buttonrm{
-    margin: 0 10px 180px 80px;
+    margin: 0 10px 165px 75px;
 }
 .buttonfq{
-    background-color: aqua;
-    margin: 0 10px 180px 10px;
+    background-color: #51CFED;
+    margin: 0 10px 0 10px;
 }
-.about_img{
-    margin: 150px 0 0 0;
+.about_img, .about_div, .facts{
+    margin-top: 150px;
 }
 .about_div{
-    margin: 150px 0 0 50px;
+    padding-left: 40px;
 }
 .head3-1{
     color: #51CFED;
@@ -134,7 +168,6 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
 }
 .global, .delivery{
     width: 45%;
-    height: 50%;
     margin: 50px 0 0 0;
 }
 .delivery{
@@ -146,41 +179,44 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
 .buttonem{
     margin: 40px 10px 0 0;
 }
-.headphone-div{
+.headphone_icon{
     width: 60px;
     margin: 40px 0 0 0;
     padding: 10px;
 }
-.white-icon{
+.white_icon{
     fill: #ffffff;
     width: 40px;
+    height: 40px;
 }
-.facts_div{
+.facts_query{
     margin: 40px 0 0 20px;
     width: 40%;
-    height: 200px;
 }
 .red-txt{
     color: #ff3333;
     margin: 8px 0 0 0;
 }
-.facts{
-    width: 45%;
-    height: 380px;
+.some_facts{
+    width: 50%;
+    padding-left: 75px;
 }
 .facts_main{
-    margin: 150px 15px 0 50px;
-    height: 370px;
+    margin: 0 15px 0 25px;
+    width: 40%;
 }
-.facts_div1{
+.customers{
+    width: 40%;
+}
+.clients{
     background-color: #FF3E41;
 }
-.facts_div2{
+.shipments{
     background-color: #51CFED;
 }
-.facts_div3{
+.cust_reviews{
     background-color: #198754;
-    margin: 250px 0 0 10px;
+    margin: 85px 0 0 10px;
 }
 .ftxt1{
     font-size: 32px;
@@ -194,11 +230,11 @@ img, .top-div3, .facts_div1, .facts_div2, .service_head, .service_main1{
     margin: 100px 0 0 0;
 }
 .service_main1{
-    margin: 0 0 0 55px;
+    margin: auto;
+    width: 88%;
 }
 .service_div1{
-    width: 27%;
-    height: 390px;
+    width: 30%;
     margin: 0 0 30px 30px;
     box-shadow: 0 0 5px;
 }
