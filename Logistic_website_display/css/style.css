@@ -10,37 +10,54 @@ p{
     line-height: 22px;
     color: #555555;
 }
+a:visited{
+    color: black;
+}
+a:hover, span{
+    color: #FF3E41;
+}
 svg{
     fill: #ff3333;
 }
-span{
-    color: #FF3E41;
+.up_arrow_icon{
+    fill: #ffffff;
+    width: 15px;
+    height: 25px;
+}
+.up_arrow{
+    background-color: #FF3E41;
+    width: 46px;
+    height: 48px;
+    border: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
 }
 img, .navigation, .top-border, .banner, .about, .facts, .trans_banner, 
 .clients, .shipments,.cust_reviews, .service_head{
     width: 100%;
 }
-.nav_left,.nav_bar_icon, .nav_bar, .nav_items, .nav_items1, .banner, .about_img, .about_div, .some_facts, 
+.nav_left, .nav_bar_icon, .nav_bar, .nav_items, .banner, .about_img, .about_div, .some_facts, 
 .reviews, .global, .delivery, .headphone_icon, .facts_query, .facts_main, .customers, 
-.service_head, .service_div1, .feature_div1, .feature_div2, .tick, .price_txt {
+.service_head, .service_div, .feature_div1, .feature_div2, .tick, .price_txt {
     display: inline-block;
 }
 .nav_left, .buttonem, .headphone_icon, .arrow, .buttonrm{
     background-color: #ff3333;
 }    
-.clients, .shipments, .cust_reviews, .service_div1{
+.clients, .shipments, .cust_reviews, .service_div{
     padding: 21px;
 }
-.nav_txt, .center1{
+.nav_txt, .center{
     text-align: center;
 }
-.nav_txt, .head1, .head3, .img_txt, .buttonrm, .buttonfq, .buttonem, .ftxt1, .ftxt2{
+.nav_txt, .banner_head2, .banner_head1, .banner_txt, .buttonrm, .buttonfq, .buttonem, .ftxt1, .ftxt2{
     color: #ffffff;
 }
-.nav_bar_icon, .nav_items, .nav_items1{
+.nav_bar_icon, .nav_items{
     padding-left: 19px;
 }
-.img_txt, .red-txt{
+.banner_txt, .red_txt{
     font-size: 18px;
 }
 .buttonrm, .buttonfq, .buttonem{
@@ -54,7 +71,7 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .about_div, .delivery, .reviews, .customers, .feature_div1{
     vertical-align: top;
 }
-.head3,.head3-1, .facts_query, .ftxt1{
+.banner_head1, .banner_head2, .header1, .facts_query, .ftxt1{
     font-weight: bold;
 }
 .shipments, .arrow{
@@ -66,33 +83,30 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
     z-index: 1;
     transition: 0.5s;
     background-color: #ffffff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 .border{
     border: 3px solid #ff3333;
     opacity: 0.9;
 }
-.nav_items1::before{
-    content: "";
-    width: 50px;
-    height: 5px;
-    position: absolute;
-    top: 0;
-    left: 525px;
-    background-color: #ffffff;
-}
-.nav_items::before{
+li::before{
     content: "";
     display: none;
-    width: 50px;
-    height: 5px;
+    width: 80%;
+    height: 6px;
     position: absolute;
-    top: 0;
-    left: 595px;
+    top: -35px;
     background-color: #ffffff;
-    transition: 2s;
+    text-align: center;
 }
-.nav_items:hover::before{
+li:hover::before, li:active::before{
     display: block;
+}
+li a{
+    text-decoration: none;
+}
+li{
+    position: relative;
 }
 .nav_left{
     width: 18%;
@@ -106,19 +120,37 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .nav_bar_icon{
     width: 5%;
     opacity: 0.9;
+    vertical-align: bottom;
 }
 .nav_bar{
     padding: 8px;
     width: 79%;
     text-align: end;
 }
-.nav_items, .nav_items1{
+.nav_items{
     font-size: 14px;
     vertical-align: bottom;
 }
-.nav_items:hover{
-    color: #FF3E41;
+
+.dropdown{
+    position: relative;
+    display: inline-block;
 }
+.dropdown_items{
+    display: none;
+    position: absolute;
+    top: 30px;
+    background-color: #ffffff;
+    color: #555555;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.7);
+    text-align: left;
+    min-width: 120px;
+    
+}
+.dropdown:hover .dropdown_items{
+    display: block;
+}
+
 .nav_bar_pno{
     font-size: 21px;
     letter-spacing: 1px;
@@ -132,16 +164,16 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
     position: absolute;
     top: 0;
 }
-.head3{
+.banner_head1{
     font-size: 17px;
     text-transform: uppercase;
     padding: 160px 0 15px 75px;
 }
-.head1{
+.banner_head2{
     margin-left: 75px;
     font-size: 55px;
 }
-.img_txt{
+.banner_txt{
     padding: 30px 0 30px 75px;
     font-weight: 600;
 }
@@ -158,11 +190,11 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .about_div{
     padding-left: 40px;
 }
-.head3-1{
+.header1{
     color: #51CFED;
     margin: 0;
 }
-.head1-1{
+.header2{
     font-size: 40px;
     margin: 20px 0 50px 0;
 }
@@ -175,6 +207,7 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 }
 .globe{
     margin: 15px 0 10px 0;
+    font-size: 20px;
 }
 .buttonem{
     margin: 40px 10px 0 0;
@@ -189,11 +222,12 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
     width: 40px;
     height: 40px;
 }
+
 .facts_query{
     margin: 40px 0 0 20px;
     width: 40%;
 }
-.red-txt{
+.red_txt{
     color: #ff3333;
     margin: 8px 0 0 0;
 }
@@ -229,19 +263,48 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .service_head{
     margin: 100px 0 0 0;
 }
-.service_main1{
+.service_main{
     margin: auto;
     width: 88%;
 }
-.service_div1{
+.service_div{
     width: 30%;
     margin: 0 0 30px 30px;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 45px 0 rgba(235, 235, 235, 0.9);
+    transition: 0.5s;
 }
 .arrow{
-    width: 45px;
-    padding: 0;
+    padding: 5px 3px;
     border-radius: 0 25px 25px 0;
+    float: left;
+    transition: 0.5s;
+}
+.arrow_icon{
+    fill: #ffffff;
+    width: 40px;
+    height: 30px;
+    float: left;
+}
+.arrow::after{
+    content: "Read More";
+    color: #ffffff;
+    display: none;
+    position: relative;
+    top:0;
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    padding: 5px 8px 5px 0;
+    
+}
+.arrow:hover::after{
+    display: block;
+}
+.service_div:hover .arrow::after{
+    display: block;
+}
+.arrow:hover{
+    background-color: #51CFED;
 }
 .feature_div1{
     width: 11%;
@@ -250,7 +313,10 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .globe-icon{
     width: 70%;
 }
-.truck-icon{
+.global_icon{
+    width: 18%;
+}
+.truck_icon{
     width: 22%;
 }
 .feature_div2{
