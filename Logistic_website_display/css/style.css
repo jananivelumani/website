@@ -1,3 +1,4 @@
+/* global classes */
 *{
     margin: 0;
     padding: 0;
@@ -33,13 +34,15 @@ svg{
     right: 40px;
     bottom: 40px;
 }
+/* common classes */
 img, .navigation, .top-border, .banner, .about, .facts, .trans_banner, 
 .clients, .shipments,.cust_reviews, .service_head{
     width: 100%;
 }
-.nav_left, .nav_bar_icon, .nav_bar, .nav_items, .banner, .about_img, .about_div, .some_facts, 
-.reviews, .global, .delivery, .headphone_icon, .facts_query, .facts_main, .customers, 
-.service_head, .service_div, .feature_div1, .feature_div2, .tick, .price_txt {
+.nav_left, .nav_bar_icon, .nav_bar, .nav_items, .dropdown_icon, .dropdown, .banner, 
+.about_img, .about_div, .some_facts, .reviews, .global, .delivery, .headphone_icon, 
+.facts_query, .facts_main, .customers, .service_head, .service_div, .features, 
+.feature_div1, .feature_div2, .tick, .price_txt {
     display: inline-block;
 }
 .nav_left, .buttonem, .headphone_icon, .arrow, .buttonrm{
@@ -57,7 +60,7 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .nav_bar_icon, .nav_items{
     padding-left: 19px;
 }
-.banner_txt, .red_txt{
+.banner_txt{
     font-size: 18px;
 }
 .buttonrm, .buttonfq, .buttonem{
@@ -65,10 +68,10 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
     font-size: 15px;
     border: none;
 }
-.about_img, .about_div, .reviews{
+.about_img, .about_div, .reviews, .features{
     width: 49%;
 }
-.about_div, .delivery, .reviews, .customers, .feature_div1{
+.about_div, .delivery, .reviews, .customers, .features, .feature_div1{
     vertical-align: top;
 }
 .banner_head1, .banner_head2, .header1, .facts_query, .ftxt1{
@@ -77,6 +80,18 @@ img, .navigation, .top-border, .banner, .about, .facts, .trans_banner,
 .shipments, .arrow{
     margin: 20px 0 0 0;
 }
+.about_img, .about_div, .facts, .features{
+    margin-top: 150px;
+}
+.global, .delivery{
+    width: 45%;
+    margin: 50px 0 0 0;
+}
+li, .nav_txt, .banner, .dropdown{
+    position: relative;
+    top: 0;
+}
+/* navigation bar */
 .navigation{
     position: sticky;
     top: 0;
@@ -105,64 +120,65 @@ li:hover::before, li:active::before{
 li a{
     text-decoration: none;
 }
-li{
-    position: relative;
-}
 .nav_left{
     width: 18%;
     padding: 21px;
     opacity: 0.9;
 }
 .nav_txt{
-    position: relative;
     font-size: 28px;
 }
 .nav_bar_icon{
     width: 5%;
     opacity: 0.9;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 .nav_bar{
-    padding: 8px;
     width: 79%;
     text-align: end;
 }
 .nav_items{
     font-size: 14px;
-    vertical-align: bottom;
 }
-
 .dropdown{
-    position: relative;
-    display: inline-block;
+    padding: 10px 0 15px 0;
 }
-.dropdown_items{
+.dropdown_icon{
+    fill: #555555;
+    width: 15px;
+    height: 31px;
+    padding-top: 21px;
+}
+.dropdown_content li{
+    list-style-type: none;
+    padding: 5px 0 5px 10px;
+    font-size: 15px;
+}
+.dropdown_content{
     display: none;
     position: absolute;
-    top: 30px;
+    top: 60px;
     background-color: #ffffff;
     color: #555555;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,0.7);
     text-align: left;
-    min-width: 120px;
-    
+    width: 140px;
 }
-.dropdown:hover .dropdown_items{
+.dropdown:hover .dropdown_content{
     display: block;
 }
-
 .nav_bar_pno{
     font-size: 21px;
     letter-spacing: 1px;
 }
-.banner{
-    position: relative;
-    top: 0;
-}
+/* banner */
 .trans_banner{
     background: rgba(6, 3, 21, .5);
     position: absolute;
     top: 0;
+}
+.banner_div{
+    width: 70%;
 }
 .banner_head1{
     font-size: 17px;
@@ -184,9 +200,7 @@ li{
     background-color: #51CFED;
     margin: 0 10px 0 10px;
 }
-.about_img, .about_div, .facts{
-    margin-top: 150px;
-}
+/* about */
 .about_div{
     padding-left: 40px;
 }
@@ -195,12 +209,8 @@ li{
     margin: 0;
 }
 .header2{
-    font-size: 40px;
+    font-size: 37px;
     margin: 20px 0 50px 0;
-}
-.global, .delivery{
-    width: 45%;
-    margin: 50px 0 0 0;
 }
 .delivery{
     margin: 50px 0 0 30px;
@@ -212,6 +222,7 @@ li{
 .buttonem{
     margin: 40px 10px 0 0;
 }
+/* facts */
 .headphone_icon{
     width: 60px;
     margin: 40px 0 0 0;
@@ -222,12 +233,12 @@ li{
     width: 40px;
     height: 40px;
 }
-
 .facts_query{
     margin: 40px 0 0 20px;
     width: 40%;
 }
 .red_txt{
+    font-size: 25px;
     color: #ff3333;
     margin: 8px 0 0 0;
 }
@@ -260,18 +271,22 @@ li{
     font-size: 18px;
     margin: 15px 0 0 0;
 }
+/* services */
 .service_head{
-    margin: 100px 0 0 0;
+    margin-top: 200px;
 }
 .service_main{
     margin: auto;
     width: 88%;
 }
 .service_div{
-    width: 30%;
-    margin: 0 0 30px 30px;
+    width: 32%;
+    margin: 0 0 30px 10px;
     box-shadow: 0 0 45px 0 rgba(235, 235, 235, 0.9);
     transition: 0.5s;
+}
+.service_img{
+    height: auto;
 }
 .arrow{
     padding: 5px 3px;
@@ -306,11 +321,15 @@ li{
 .arrow:hover{
     background-color: #51CFED;
 }
+/* features */
+.features{
+    padding-left: 75px;
+}
 .feature_div1{
     width: 11%;
     margin: 15px 0 30px 0;
 }
-.globe-icon{
+.globe_icon{
     width: 70%;
 }
 .global_icon{
@@ -323,4 +342,104 @@ li{
     width: 80%;
     margin: 0 0 30px 0;
 }
-
+.menu_btn{
+    border: 1px solid grey;
+    padding: 5px;
+    margin: 10px 20px;
+    width: 15%;
+    height: 1%;
+    display: none;
+    float: right;
+}
+/* media queries */
+@media screen and (max-width: 425px) {
+    /* common classes */
+    img{
+        height: 440px;
+    }
+    .buttonrm, .buttonfq{
+        padding: 10px 10px;
+    }
+    .about_img, .about_div, .global, .delivery, .some_facts, .reviews,.facts_main, .customers,
+    .service_div, .features{
+        width: 100%;
+    }
+    .about_img, .about_div, .some_facts, .facts_main, .customers, .features{
+        padding: 0 20px;
+    }
+    .about_img, .facts{
+        margin-top: 150px;
+    }
+    .about_div, .reviews{
+        margin-top: 50px;
+    }
+    .cust_reviews, .service_div{
+        margin: 20px 0 0 0;
+    }
+    /* nav bar */
+    .nav_bar{
+        display: none;
+    }
+    .nav_left{
+        width: 35%;
+        padding: 23px;
+    }
+    .nav_txt{
+        font-size: 24px;
+    }
+    .menu_btn{
+        display: inline-block;
+    }
+    /* banner */
+    .banner_head1{
+        font-size: 13px;
+        padding: 100px 0 15px 15px;
+    }
+    .banner_head2{
+        font-size: 30px;
+        margin-left: 15px;
+    }
+    .banner_txt{
+        font-size: 14px;
+        padding: 15px 15px 0 15px;
+    }
+    .banner_div{
+        width: 85%;
+    }
+    .buttonrm{
+        margin: 30px 15px;
+    }
+    .buttonfq{
+        margin: 0 10px 85px 10px;
+    }
+    /* about */
+    .header2{
+        font-size: 27px;
+    }
+    .global_icon{
+        width: 13%;
+    }
+    .truck_icon{
+        width: 15%;
+    }
+    .delivery{
+        margin-left: 0;
+    }
+    /* facts */
+    .facts_query{
+        width: 70%;
+    }
+    .facts_main{
+        margin: 0;
+    }
+    .ftxt1{
+        font-size: 25px;
+    }
+    .ftxt2{
+        font-size: 16px;
+    }
+    /* feature */
+    .feature_div1{
+        width: 15%;
+    }
+}
